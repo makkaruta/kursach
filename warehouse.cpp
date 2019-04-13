@@ -1,4 +1,4 @@
-#include "institution.h"
+п»ї#include "institution.h"
 #include "warehouse.h"
 
 #include <string>
@@ -24,7 +24,7 @@ WAREHOUSE::WAREHOUSE(string file_name)
     file.open(file_name.c_str());
     if (!file.is_open())
     {
-        cout << "Файл " << file_name << " не найден!" << endl;
+        cout << "Р¤Р°Р№Р» " << file_name << " РЅРµ РЅР°Р№РґРµРЅ!" << endl;
         amount = 0;
         store = NULL;
     }
@@ -71,27 +71,28 @@ bool WAREHOUSE::product_search(string temp_code)
     string choise;
     for(int i=0; i<amount; ++i)
     {
-        if (store[amount].vendor_code == temp_code && store[amount].quantity > 0)
+        if (store[i].vendor_code == temp_code && store[i].quantity > 0)
         {
-            cout << "Товар в наличии на складе. Забронировать товар для самовывоза? (Да/Нет)" << endl;
+            cout << "\tРўРѕРІР°СЂ РІ РЅР°Р»РёС‡РёРё РЅР° СЃРєР»Р°РґРµ. Р—Р°Р±СЂРѕРЅРёСЂРѕРІР°С‚СЊ С‚РѕРІР°СЂ РґР»СЏ СЃР°РјРѕРІС‹РІРѕР·Р°? (Р”Р°/РќРµС‚)" << endl << "\t";
             cin >> choise;
-            if (choise == "Да" || choise == "да")
+            if (choise == "Р”Р°" || choise == "РґР°")
+            {
+                store[i].quantity--;
+                cout << "\tРўРѕРІР°СЂ Р·Р°Р±СЂРѕРЅРёСЂРѕРІР°РЅ." << endl;
                 return true;
-            else if (choise == "Нет" || choise == "нет")
-                return false;
+            }
             else
             {
-                cout << "Некорректный ответ." << endl;
+                cout << "\tР—Р°РєР°Р· РѕС‚РјРµРЅС‘РЅ." << endl;
                 return false;
             }
         }
     }
-    if(next != NULL){
+    if(next != NULL)
+    {
         if (next->product_search(temp_code) == true)
-        {
             return true;
-        }
     }
-    cout << "Извините, товара нет в наличии." << endl;
+    cout << "\tРР·РІРёРЅРёС‚Рµ, С‚РѕРІР°СЂР° РЅРµС‚ РІ РЅР°Р»РёС‡РёРё." << endl;
     return false;
 }

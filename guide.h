@@ -1,4 +1,4 @@
-#pragma once
+п»ї#pragma once
 
 #include <string>
 
@@ -7,16 +7,16 @@ using namespace std;
 class GUIDE{
 private:
     string name;
-	string publishing_house; // издательство
+	string publishing_house; // РёР·РґР°С‚РµР»СЊСЃС‚РІРѕ
 	int year;
 	int num_pages;
 	bool illustrations;
 	bool city_map;
-	string binding; // переплёт
+	string binding; // РїРµСЂРµРїР»С‘С‚
 	string format;
 	string author;
-	int quantity; // количество в наличии всего
-	string vendor_code; // артикул
+	int quantity; // РєРѕР»РёС‡РµСЃС‚РІРѕ РІ РЅР°Р»РёС‡РёРё РІСЃРµРіРѕ
+	string vendor_code; // Р°СЂС‚РёРєСѓР»
 public:
     void set_name(string temp);
 	void set_publishing_house(string temp);
@@ -28,7 +28,7 @@ public:
 	void set_format(string temp);
 	void set_author(string temp);
 	void set_quantity(int temp);
-	void set_vendor_code(string temp); // артикул
+	void set_vendor_code(string temp); // Р°СЂС‚РёРєСѓР»
 
 	string get_name();
 	string get_publishing_house();
@@ -41,17 +41,6 @@ public:
 	string get_author();
 	int get_quantity();
 	string get_vendor_code();
-
-	/*void show_name();
-	void show_publishing_house();
-	void show_year();
-	void show_num_pages();
-	void show_illustrations();
-	void show_city_map();
-	void show_binding();
-	void show_format();
-	void show_author();
-	void show_quantity();*/
 
 	void purchased(int order);
 };

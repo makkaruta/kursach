@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 #include <string>
 
@@ -16,6 +16,6 @@ protected:
     RECORD *store;
     INSTITUTION *next;
 public:
-    setNext();
+    void set_next(INSTITUTION *temp){next = temp;};
     virtual bool product_search(string temp_code) = 0;
 };

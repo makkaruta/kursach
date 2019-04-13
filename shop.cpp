@@ -1,4 +1,4 @@
-#include "institution.h"
+п»ї#include "institution.h"
 #include "shop.h"
 
 #include <string>
@@ -12,7 +12,7 @@ SHOP::SHOP()
     amount = 0;
     store = NULL;
     next = NULL;
-    name = "Безымянный";
+    name = "Р‘РµР·С‹РјСЏРЅРЅС‹Р№";
 }
 
 SHOP::SHOP(string file_name, string temp)
@@ -26,7 +26,7 @@ SHOP::SHOP(string file_name, string temp)
     file.open(file_name.c_str());
     if (!file.is_open())
     {
-        cout << "Файл " << file_name << " не найден!" << endl;
+        cout << "Р¤Р°Р№Р» " << file_name << " РЅРµ РЅР°Р№РґРµРЅ!" << endl;
         amount = 0;
         store = NULL;
     }
@@ -72,18 +72,17 @@ bool SHOP::product_search(string temp_code)
 {
     for(int i=0; i<amount; ++i)
     {
-        if (store[amount].vendor_code == temp_code && store[amount].quantity > 0)
+        if (store[i].vendor_code == temp_code && store[i].quantity > 0)
         {
-            cout << "Оформлена доставка из магазина " << name << "."  << endl;
+            store[i].quantity--;
+            cout << "\tРћС„РѕСЂРјР»РµРЅР° РґРѕСЃС‚Р°РІРєР° РёР· РјР°РіР°Р·РёРЅР° " << name << "."  << endl;
             return true;
         }
     }
-    if(next != NULL){
+    if(next != NULL)
+    {
         if (next->product_search(temp_code) == true)
-        {
             return true;
-        }
     }
-    cout << "Извините, товара нет в наличии." << endl;
     return false;
 }

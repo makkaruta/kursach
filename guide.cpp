@@ -1,4 +1,4 @@
-#include "guide.h"
+﻿#include "guide.h"
 
 #include <string>
 

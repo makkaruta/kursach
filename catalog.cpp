@@ -1,4 +1,4 @@
-#include "catalog.h"
+Ôªø#include "catalog.h"
 #include "guide.h"
 
 #include <cstdlib>
@@ -18,7 +18,7 @@ CATALOG::CATALOG()
     file.open("site.txt");
     if (!file.is_open())
     {
-        cout << "‘‡ÈÎ site.txt ÌÂ Ì‡È‰ÂÌ!" << endl;
+        cout << "–§–∞–π–ª site.txt –Ω–µ –Ω–∞–π–¥–µ–Ω!" << endl;
         amount = 0;
         guides = NULL;
     }
@@ -43,13 +43,13 @@ CATALOG::CATALOG()
             guides->set_num_pages(temp_int);
             getline(file, temp_string, '\t');
             getline(file, temp_string, '\t');
-            if (temp_string == "‰‡")
+            if (temp_string == "–¥–∞")
                 temp_bool = true;
             else
                 temp_bool = false;
             guides->set_illustrations(temp_bool);
             getline(file, temp_string, '\t');
-            if (temp_string == "‰‡")
+            if (temp_string == "–¥–∞")
                 temp_bool = true;
             else
                 temp_bool = false;
@@ -87,13 +87,13 @@ CATALOG::CATALOG()
             guides[amount-1].set_num_pages(temp_int);
             getline(file, temp_string, '\t');
             getline(file, temp_string, '\t');
-            if (temp_string == "‰‡")
+            if (temp_string == "–¥–∞")
                 temp_bool = true;
             else
                 temp_bool = false;
             guides[amount-1].set_illustrations(temp_bool);
             getline(file, temp_string, '\t');
-            if (temp_string == "‰‡")
+            if (temp_string == "–¥–∞")
                 temp_bool = true;
             else
                 temp_bool = false;
@@ -114,28 +114,47 @@ CATALOG::CATALOG()
     }
 }
 
+int CATALOG::get_amount()
+{
+    return amount;
+}
+
+string CATALOG::get_vendor_code(int temp)
+{
+    return guides[temp-1].get_vendor_code();
+}
+
+string CATALOG::get_name(int temp)
+{
+    return guides[temp-1].get_name();
+}
+
+void CATALOG::purchased(int temp)
+{
+    guides[temp-1].purchased(1);
+}
 
 void CATALOG::show()
 {
     if (guides == NULL)
     {
-        cout << " ‡Ú‡ÎÓ„ ÔÛÒÚ" << endl;
+        cout << "–ö–∞—Ç–∞–ª–æ–≥ –ø—É—Å—Ç" << endl;
     }
     else
     {
-        cout << " π|               Ì‡Á‚‡ÌËÂ              | ËÁ‰‡ÚÂÎ¸ÒÚ‚Ó |  „Ó‰ | ÒÚ.| ÙÓÚÓ|Í‡Ú‡| ÔÂÂÔÎÂÚ| ÙÓÏ‡Ú  |   ‡‚ÚÓ    | Í-‚Ó" << endl;
+        cout << " ‚Ññ|               –Ω–∞–∑–≤–∞–Ω–∏–µ              | –∏–∑–¥–∞—Ç–µ–ª—å—Å—Ç–≤–æ |  –≥–æ–¥ | —Å—Ç—Ä.| —Ñ–æ—Ç–æ|–∫–∞—Ä—Ç–∞| –ø–µ—Ä–µ–ø–ª–µ—Ç| —Ñ–æ—Ä–º–∞—Ç  |   –∞–≤—Ç–æ—Ä    | –∫-–≤–æ" << endl;
         cout << "________________________________________________________________________________________________________________________" << endl;
         for(int i=0; i<amount; ++i)
         {
             printf("%2d| %-35s | %-12s | %d | %3d |", i+1, (guides[i].get_name()).c_str(), (guides[i].get_publishing_house()).c_str(), guides[i].get_year(), guides[i].get_num_pages());
             if (guides[i].get_illustrations() == true)
-                cout << "  ‰‡ |";
+                cout << "  –¥–∞ |";
             else
-                cout << " ÌÂÚ |";
+                cout << " –Ω–µ—Ç |";
             if (guides[i].get_city_map() == true)
-                cout << "  ‰‡ |";
+                cout << "  –¥–∞ |";
             else
-                cout << " ÌÂÚ |";
+                cout << " –Ω–µ—Ç |";
             printf(" %-7s | %-7s | %-10s | %3d", (guides[i].get_binding()).c_str(), (guides[i].get_format()).c_str(), (guides[i].get_author()).c_str(), guides[i].get_quantity());
             cout << endl;
         }
