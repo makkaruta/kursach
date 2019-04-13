@@ -1,6 +1,6 @@
 #pragma once
 
-#include "GUIDE.h"
+#include "guide.h"
 
 class CATALOG{
 private:

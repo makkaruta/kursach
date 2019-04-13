@@ -24,3 +24,58 @@
 	<string>
 	<windows.h>
 
+1555169835 source:c:\users\user\documents\ÂÓÇ\kursach\guide.cpp
+	"guide.h"
+	<string>
+
+1555159662 c:\users\user\documents\ÂÓÇ\kursach\guide.h
+	<string>
+
+1555178876 source:c:\users\user\documents\ÂÓÇ\kursach\main.cpp
+	"catalog.h"
+	"shop.h"
+	"warehouse.h"
+	<iostream>
+	<string>
+	<windows.h>
+
+1555169835 c:\users\user\documents\ÂÓÇ\kursach\catalog.h
+	"guide.h"
+
+1555178204 source:c:\users\user\documents\ÂÓÇ\kursach\catalog.cpp
+	"catalog.h"
+	"guide.h"
+	<cstdlib>
+	<stdio.h>
+	<iostream>
+	<fstream>
+
+1555178290 source:c:\users\user\documents\ÂÓÇ\kursach\institution.cpp
+	"institution.h"
+	<string>
+	<iostream>
+	<fstream>
+
+1555179094 c:\users\user\documents\ÂÓÇ\kursach\institution.h
+	<string>
+
+1555178825 c:\users\user\documents\ÂÓÇ\kursach\shop.h
+	"institution.h"
+
+1555178884 c:\users\user\documents\ÂÓÇ\kursach\warehouse.h
+	"institution.h"
+
+1555179143 source:c:\users\user\documents\ÂÓÇ\kursach\shop.cpp
+	"institution.h"
+	"shop.h"
+	<string>
+	<iostream>
+	<fstream>
+
+1555179167 source:c:\users\user\documents\ÂÓÇ\kursach\warehouse.cpp
+	"institution.h"
+	"warehouse.h"
+	<string>
+	<iostream>
+	<fstream>
+

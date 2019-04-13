@@ -1,7 +1,6 @@
-#include "CATALOG.h"
-#include "GUIDE.h"
+#include "catalog.h"
+#include "guide.h"
 
-#include <iostream>
 #include <cstdlib>
 #include <stdio.h>
 #include <iostream>
@@ -69,7 +68,6 @@ CATALOG::CATALOG()
         }
         while (!file.eof())
         {
-            //cout << "..." << endl;
             GUIDE *temp;
             temp = new GUIDE[amount];
             for (int i=0; i<amount; ++i)

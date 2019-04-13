@@ -36,7 +36,12 @@
 		<Unit filename="catalog.h" />
 		<Unit filename="guide.cpp" />
 		<Unit filename="guide.h" />
+		<Unit filename="institution.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="shop.cpp" />
+		<Unit filename="shop.h" />
+		<Unit filename="warehouse.cpp" />
+		<Unit filename="warehouse.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
