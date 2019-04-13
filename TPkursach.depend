@@ -1,0 +1,26 @@
+# depslib dependency file v1.0
+1555161429 source:c:\users\user\documents\бсг\tpkursach\catalog.cpp
+	"CATALOG.h"
+	"GUIDE.h"
+	<iostream>
+	<cstdlib>
+	<stdio.h>
+	<iostream>
+	<fstream>
+
+1555154818 c:\users\user\documents\бсг\tpkursach\catalog.h
+	"GUIDE.h"
+
+1555159662 c:\users\user\documents\бсг\tpkursach\guide.h
+	<string>
+
+1555158781 source:c:\users\user\documents\бсг\tpkursach\guide.cpp
+	"GUIDE.h"
+	<string>
+
+1555157018 source:c:\users\user\documents\бсг\tpkursach\main.cpp
+	"CATALOG.h"
+	<iostream>
+	<string>
+	<windows.h>
+
